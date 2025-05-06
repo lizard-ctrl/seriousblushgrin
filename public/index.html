@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Product Page</title>
+  <link rel="stylesheet" href="style.css"/>
+  
+</head>
+<body>
+    <canvas id="draw-canvas"></canvas>
+<div id="wrapper">
+<a href="index.html>"<h1 id="title">BLUSHINGGRINNING!</h1></a>
+
+<div id="image-container"></div>
+
+<a href="otherpages/artist.html">Index</p></a>
+<p id="nav">Contact</p>
+<p id="nav">Youtube</p>
+</div>
+
+<div id="content-wrapper">
+<div id="updates">
+    <h1>Newest Release</h1>
+    <img src="assets/images/releases/harry/harryrelease.jpg" alt="Product image" />
+    <p>Information information information</p>
+</div>
+
+<div class="product-grid">
+    <div class="product">
+        <a href="productpages/harrysings.html">
+      <h1>Dream Journal</h1>
+      <img src="assets/images/releases/harry/harryrelease.jpg" alt="Product image" />
+      </a>
+      <p>$20.00</p>
+      <button onclick="goToCheckout('price_1RLqLQPr778ACl02rKsnE3SG')">Buy Now</button>
+    </div>
+
+    <div class="product">
+      <h1>Dream Journal 2</h1>
+      <img src="assets/images/releases/harry/harryrelease.jpg" alt="Product image" />
+      <p>$20.00</p>
+      <button onclick="goToCheckout('price_1RLpSPPr778ACl0243lGO9Zs')">Buy Now</button>
+    </div>
+
+    <div class="product">
+      <h1>Dream Journal 3</h1>
+      <img src="assets/images/releases/harry/harryrelease.jpg" alt="Product image" />
+      <p>$20.00</p>
+      <button onclick="goToCheckout('price_XXXXXXX')">Buy Now</button>
+    </div>
+
+    <div class="product">
+      <h1>Dream Journal 4</h1>
+      <img src="assets/images/releases/harry/harryrelease.jpg" alt="Product image" />
+      <p>$20.00</p>
+      <button onclick="goToCheckout('price_XXXXXXX')">Buy Now</button>
+    </div>
+  </div>
+</div>
+  <!-- Replace price ID below with your real Stripe price ID -->
+  
+
+
+  <script>
+    function goToCheckout(priceId) {
+      // Pass the price ID via query string to checkout.html
+      window.location.href = `checkout.html?priceId=${priceId}`;
+    }
+
+    const imageSrc = "assets/images/logo/mouse.png";
+    const maxImages = 6;
+    const container = document.getElementById("image-container");
+
+    let count = 0;
+
+    function addImage() {
+      if (count >= maxImages) {
+        container.innerHTML = ""; // reset
+        count = 0;
+      }
+
+      const img = document.createElement("img");
+      img.src = imageSrc;
+      img.className = "image-item";
+      container.appendChild(img);
+
+      count++;
+    }
+
+    // Add one every 1 second
+    setInterval(addImage, 1000);
+
+    const canvas = document.getElementById('draw-canvas');
+  const ctx = canvas.getContext('2d');
+  let width = window.innerWidth;
+  let height = window.innerHeight;
+  canvas.width = width;
+  canvas.height = height;
+  canvas.style.position = 'fixed';
+  canvas.style.top = 0;
+  canvas.style.left = 0;
+  canvas.style.pointerEvents = 'none';
+  canvas.style.zIndex = 900;
+
+  let points = [];
+
+  document.addEventListener('mousemove', (e) => {
+    points.push({
+      x: e.clientX,
+      y: e.clientY,
+      time: Date.now()
+    });
+  });
+
+  function draw() {
+    ctx.clearRect(0, 0, width, height);
+    const now = Date.now();
+    points = points.filter(p => now - p.time < 5000); // Keep points for 2s
+
+    for (let i = 0; i < points.length; i++) {
+      const alpha = 1 - (now - points[i].time) / 2000;
+      ctx.beginPath();
+      ctx.arc(points[i].x, points[i].y, 8, 0, Math.PI * 2);
+      ctx.fillStyle = `rgba(255, 0, 50, ${alpha})`;
+      ctx.fill();
+    }
+
+    requestAnimationFrame(draw);
+  }
+
+  draw();
+
+  window.addEventListener('resize', () => {
+    width = window.innerWidth;
+    height = window.innerHeight;
+    canvas.width = width;
+    canvas.height = height;
+  });
+
+  </script>
+
+</body>
+</html>

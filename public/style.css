@@ -1,0 +1,198 @@
+@font-face {
+    font-family: 'MyFont';
+    src: url('assets/font/Goozette.otf') format('woff2'); /* or woff/ttf depending on your file */
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  body {
+    background-color: rgb(243,229,218);
+    font-family: 'MyFont', sans-serif;
+    padding: 2rem;
+    text-align: center;
+  }
+
+ #title{
+    position: relative;
+    font-size: 3rem;
+   top: 10%;
+    color: rgb(230, 96, 94);
+ } 
+
+ #image-container {
+    display: flex;
+    gap: 10px;
+    width: 520px; /* 5 images * (100px + 10px gap) = 520px */
+    flex-wrap: nowrap;
+    overflow: hidden;
+    
+    padding: 1rem;
+  }
+  .image-item {
+    width: 80px;
+    height: auto;
+  }
+
+  #wrapper {
+    padding: 10px;
+    background-color: rgb(243,229,218);
+    z-index: 1000;
+    width: 100%;
+    position: absolute;
+    top: -1%;
+    left: 0%;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    border-bottom: solid 2px red;;
+  }
+
+  #updates{
+    
+    width: 40%;
+    height: 70%;
+    overflow: scroll;
+    background-color: red;
+
+  }
+
+  #updates img {
+    max-width: 70%;
+    height: auto;
+  }
+
+  .product-grid {
+    width: 55%;
+    height: 80vh;
+    overflow-y: scroll;
+    
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .product {
+    border: 2px dashed red;
+    padding: 1rem;
+    text-align: center;
+  }
+
+  .product img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  button {
+    padding: 10px 20px;
+    font-size: 16px;
+    margin-top: 1rem;
+    cursor: pointer;
+  }
+
+  #content-wrapper {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+    padding: 2rem;
+    position: absolute;
+    top: 20%;
+    left: 2%;
+    right: 2%;
+    width: 96%;
+    box-sizing: border-box;
+  }
+
+  @media only screen and (max-width: 768px) {
+    #content-wrapper {
+        display: flex;
+        flex-direction: column; /* Stack items vertically on smaller screens */
+        
+        justify-content: space-between;
+        gap: 2rem;
+        padding: 2rem;
+        position: absolute;
+        top: 25%;
+        overflow: scroll;
+        width: 100%;
+        box-sizing: border-box;
+      }
+
+      #updates{
+    
+        width: 100%;
+        height: 70%;
+        overflow: scroll;
+        background-color: red;
+    
+      }
+    
+      #updates img {
+        max-width: 70%;
+        height: auto;
+      }
+    
+      .product-grid {
+        width: 100%;
+        height: 80vh;
+        overflow: visible;
+        
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        max-width: 800px;
+        margin: 0 auto;
+      }
+    
+      .product {
+        border: 2px dashed red;
+        padding: 1rem;
+        text-align: center;
+      }
+    
+      .product img {
+        max-width: 100%;
+        height: auto;
+      }
+
+      #title{
+        position: relative;
+        font-size: 2.2rem;
+       top: 10%;
+        color: rgb(230, 96, 94);
+     } 
+    
+     #image-container {
+        display: flex;
+        gap: 10px;
+        width: 520px;
+        height: 50px; /* 5 images * (100px + 10px gap) = 520px */
+        flex-wrap: nowrap;
+        overflow: hidden;
+        
+        padding: 1rem;
+      }
+      .image-item {
+        width: 50px;
+        height: auto;
+      }
+    
+      #wrapper {
+        padding: 5px;
+        background-color: rgb(243,229,218);
+        z-index: 1000;
+        width: 100%;
+        position: absolute;
+        top: -1%;
+        left: 0%;
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 0px;
+        
+        column-gap: 15%;
+        border-bottom: solid 2px red;;
+      }
+    
+  }
