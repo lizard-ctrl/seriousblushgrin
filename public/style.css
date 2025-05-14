@@ -17,7 +17,7 @@
     position: relative;
     font-size: 4rem;
     top: 10%;
-    color: rgb(235, 48, 35);
+    color: rgb(212, 38, 61);
  } 
 
  a{
@@ -34,11 +34,11 @@
  }
 
  .nav:hover{
-  color: rgb(235, 48, 35);
+  color: rgb(212, 38, 61);
  }
 
  .squiggle {
-  background-image: linear-gradient(to bottom, rgb(235, 48, 35) 0%, rgb(235, 48, 35) 100%);
+  background-image: linear-gradient(to bottom, rgb(212, 38, 61) 0%, rgb(212, 38, 61) 100%);
   background-position: 0 100%;
   background-repeat: repeat-x;
   background-size: 2px 2px;
@@ -46,7 +46,7 @@
   text-decoration: none;
 }
 .squiggle:hover {
-  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 4'%3E%3Cstyle type='text/css'%3E.squiggle{animation:shift .3s linear infinite;}@keyframes shift {from {transform:translateX(0);}to {transform:translateX(-15px);}}%3C/style%3E%3Cpath fill='none' stroke='rgb(235, 48, 35)' stroke-width='2' class='squiggle' d='M0,3.5 c 5,0,5,-3,10,-3 s 5,3,10,3 c 5,0,5,-3,10,-3 s 5,3,10,3'/%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 4'%3E%3Cstyle type='text/css'%3E.squiggle{animation:shift .3s linear infinite;}@keyframes shift {from {transform:translateX(0);}to {transform:translateX(-15px);}}%3C/style%3E%3Cpath fill='none' stroke='rgb(212, 38, 61)' stroke-width='2' class='squiggle' d='M0,3.5 c 5,0,5,-3,10,-3 s 5,3,10,3 c 5,0,5,-3,10,-3 s 5,3,10,3'/%3E%3C/svg%3E");
   background-size: auto 4px;
 }
 
@@ -76,7 +76,7 @@
     display: flex;
     align-items: center;
     gap: 20px;
-    border-bottom: solid 2px rgb(235, 48, 35);;
+    border-bottom: solid 2px rgb(212, 38, 61);;
   }
 
   #updates{
@@ -85,7 +85,7 @@
     width: 40%;
     height: 70%;
     overflow: scroll !important;
-    background-color: rgb(235, 48, 35);
+    background-color: rgb(212, 38, 61);
 
   }
 
@@ -107,7 +107,7 @@
   }
 
   .product {
-    border: 2px dashed rgb(235, 48, 35);
+    border: 2px dashed rgb(212, 38, 61);
     padding: 1rem;
     text-align: center;
   }
@@ -120,7 +120,7 @@
   button {
     background-color: rgb(243,229,218);
     border-radius: 5%;
-    border: solid 3px rgb(235, 48, 35);
+    border: solid 3px rgb(212, 38, 61);
     padding: 10px 50px;
     font-size: 16px;
     margin-top: 1rem;
@@ -129,7 +129,7 @@
   }
 
   button:hover{
-    background-color: rgb(235, 48, 35);
+    background-color: rgb(212, 38, 61);
     color: white;
     
   }
@@ -148,26 +148,34 @@
   }
 
   @media only screen and (max-width: 768px) {
+    body{
+      overflow-x: hidden;
+    }
+
     #content-wrapper {
         display: flex;
         flex-direction: column; /* Stack items vertically on smaller screens */
-        
-        justify-content: space-between;
+        justify-content: center;
+        align-items: center;
         gap: 2rem;
         padding: 2rem;
         position: absolute;
-        top: 25%;
+        top: 20%;
         overflow: scroll;
+        left:0%;
         width: 100%;
         box-sizing: border-box;
+        overflow-x: hidden;
       }
+
+      
 
       #updates{
     
         width: 100%;
         height: 70%;
         overflow: scroll;
-        background-color: rgb(235, 48, 35);
+        background-color: rgb(212, 38, 61);
     
       }
     
@@ -175,6 +183,8 @@
         max-width: 70%;
         height: auto;
       }
+
+     
     
       .product-grid {
         width: 100%;
@@ -184,12 +194,13 @@
         display: flex;
         flex-direction: column;
         gap: 2rem;
-        max-width: 800px;
+        
         margin: 0 auto;
+        padding-bottom: 10rem;
       }
     
       .product {
-        border: 2px dashed rgb(235, 48, 35);
+        border: 2px dashed rgb(212, 38, 61);
         padding: 1rem;
         text-align: center;
       }
@@ -203,26 +214,27 @@
         position: relative;
         font-size: 2.2rem;
        top: 10%;
-        color: rgb(230, 96, 94);
+        color: rgb(212, 38, 61);
      } 
     
      #image-container {
         display: flex;
         gap: 10px;
         width: 520px;
-        height: 50px; /* 5 images * (100px + 10px gap) = 520px */
+        height: 20px; /* 5 images * (100px + 10px gap) = 520px */
         flex-wrap: nowrap;
         overflow: hidden;
         
         padding: 1rem;
       }
+
       .image-item {
-        width: 50px;
-        height: auto;
+        width: 30px;
+        height: 30px;
       }
     
       #wrapper {
-        padding: 5px;
+        padding: 0px;
         background-color: rgb(243,229,218);
         z-index: 1000;
         width: 100%;
@@ -233,9 +245,18 @@
         align-items: center;
         flex-wrap: wrap;
         gap: 0px;
-        
-        column-gap: 15%;
-        border-bottom: solid 2px rgb(235, 48, 35);;
+        justify-content: center;
+        column-gap: 5%;
+        border-bottom: solid 2px rgb(212, 38, 61);;
       }
     
+      .nav{
+        position: relative;
+        font-size: 1.2rem;
+        top: 10%;
+        color: rgb(48,48,54);
+        text-align: center;
+       }
+       
+       
   }

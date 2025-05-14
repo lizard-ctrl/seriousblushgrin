@@ -7,7 +7,7 @@ const app = express();
 app.use(express.static("public"));
 app.use(express.json()); // Needed to parse JSON body from POST
 
-const YOUR_DOMAIN = "https://blushgrin.onrender.com";
+const YOUR_DOMAIN = "http://localhost:5500";
 
 // Create Checkout Session dynamically from priceId
 app.post("/create-checkout-session", async (req, res) => {

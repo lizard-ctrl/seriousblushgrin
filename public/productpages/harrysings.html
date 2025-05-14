@@ -10,13 +10,14 @@
 <body>
     <canvas id="draw-canvas"></canvas>
     <div id="wrapper">
-      <a href="index.html>"<h1 id="title" class="squiggle">blushing grinning</h1></a>
+      <a href="\public/index.html"<h1 id="title" class="squiggle">blushing grinning</h1></a>
       
       <div id="image-container"></div>
       
-      <a href="otherpages/artist.html"><p class="nav">Index</p></a>
-      <a href="mailto:emmataylorpaydos@gmail.com?subject=Hi blushinggrinning&body=Blahblahblahnicetomeetyou"><p class="nav">Contact</p></a>
+      <a href="\public/otherpages/artist.html"><p class="nav">Index</p></a>
+      <a href="\public/otherpages/contact.html"><p class="nav">Contact</p></a>
       <a href="youtube.com"><p class="nav">Youtube</p></a>
+      <a href="https://www.instagram.com/blushinggrinning/"><p class="nav">IG</p></a>
       </div>
 
 <div id="content-wrapper">
@@ -30,7 +31,7 @@
       <div id="TitleCard">
         <h1>Harry Sings</h1>
         <img id="carousel-image" src="../assets/images/releases/harry/harryrelease.jpg" alt="Product image" />
-        <button onclick="goToCheckout('price_XXXXXXX')">Buy Now</button>
+        <button onclick="goToCheckout('price_1RLqLQPr778ACl02rKsnE3SG')">Buy Now</button>
       </div>
 
     </div>
@@ -41,7 +42,7 @@
   <script>
     function goToCheckout(priceId) {
       // Pass the price ID via query string to checkout.html
-      window.location.href = `checkout.html?priceId=${priceId}`;
+      window.location.href = `/checkout.html?priceId=${priceId}`;
     }
 
 

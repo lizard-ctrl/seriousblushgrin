@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Product Page</title>
-  <link rel="stylesheet" href="artist.css"/>
+  <link rel="stylesheet" href="contact.css"/>
   
 </head>
 <body>
@@ -22,45 +22,17 @@
 
 <div id="content-wrapper">
    
-    
-  <div id="artist-container">
-        <div class="artist" onclick="toggleInfo(1)">
-            <span class="artist-name">
-              Harry
-              <span class="artist-location">New York</span> <!-- Location added here -->
-            </span>
-          </div>
-          <div class="artist-info" id="info-1">
-            <p>Artist 1's information goes here.</p>
-          </div>
-          
-          <div class="artist" onclick="toggleInfo(2)">
-            <span class="artist-name">
-              Cootie Catcher
-              <span class="artist-location">Los Angeles</span> <!-- Location added here -->
-            </span>
-          </div>
-          <div class="artist-info" id="info-2">
-            <p>Artist 2's information goes here.</p>
-          </div>
-          
-          <div class="artist" onclick="toggleInfo(3)">
-            <span class="artist-name">
-              Fib
-              <span class="artist-location">Chicago</span> <!-- Location added here -->
-            </span>
-          </div>
-          <div class="artist-info" id="info-3">
-            <p>Artist 3's information goes here.</p>
-          </div>
+   
+
+  <div id="text-container">
+    <h2>Contact/About</h2>
+    <p>"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>
+   
         </div>
       
  
-    <div id="imageFun">
-        <img src="../assets/images/logo/mouse.png" alt="Product image" />
+   
     </div>
-    </div>
-  <!-- Replace price ID below with your real Stripe price ID -->
   
 
 
@@ -74,7 +46,7 @@
     
  
     const imageSrc = "../assets/images/logo/mouse.png";
-    const maxImages = 5;
+    const maxImages = 15;
     const container = document.getElementById("image-container");
 
     let count = 0;

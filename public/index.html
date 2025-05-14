@@ -10,13 +10,14 @@
 <body>
     <canvas id="draw-canvas"></canvas>
 <div id="wrapper">
-<a href="index.html>"<h1 id="title" class="squiggle">blushing grinning</h1></a>
+<a href="index.html"<h1 id="title" class="squiggle">blushing grinning</h1></a>
 
 <div id="image-container"></div>
 
 <a href="otherpages/artist.html"><p class="nav">Index</p></a>
-<a href="mailto:emmataylorpaydos@gmail.com?subject=Hi blushinggrinning&body=Blahblahblahnicetomeetyou"><p class="nav">Contact</p></a>
+<a href="otherpages/contact.html"><p class="nav">Contact</p></a>
 <a href="youtube.com"><p class="nav">Youtube</p></a>
+<a href="https://www.instagram.com/blushinggrinning/"><p class="nav">IG</p></a>
 </div>
 
 
@@ -58,6 +59,7 @@
       <p>$20.00</p>
       <button onclick="goToCheckout('price_XXXXXXX')">Buy Now</button>
     </div>
+    
   </div>
 </div>
   <!-- Replace price ID below with your real Stripe price ID -->
@@ -71,7 +73,7 @@
     }
 
     const imageSrc = "assets/images/logo/mouse.png";
-    const maxImages = 7;
+    const maxImages = 15;
     const container = document.getElementById("image-container");
 
     let count = 0;
@@ -124,7 +126,7 @@
       const alpha = 1 - (now - points[i].time) / 2000;
       ctx.beginPath();
       ctx.arc(points[i].x, points[i].y, 8, 0, Math.PI * 2);
-      ctx.fillStyle = `rgba(255, 0, 50, ${alpha})`;
+      ctx.fillStyle = `rgba(219, 42, 54, ${alpha})`;
       ctx.fill();
     }
 
