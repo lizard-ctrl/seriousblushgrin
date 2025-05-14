@@ -7,22 +7,53 @@
 
   body {
     background-color: rgb(243,229,218);
-    font-family: 'MyFont', sans-serif;
+    color: rgb(48,48,54);
+    font-family: "Times New Roman", Times, serif;
     padding: 2rem;
     text-align: center;
   }
 
  #title{
     position: relative;
-    font-size: 3rem;
-   top: 10%;
-    color: rgb(230, 96, 94);
+    font-size: 4rem;
+    top: 10%;
+    color: rgb(235, 48, 35);
  } 
+
+ a{
+  color: rgb(48,48,54);
+  text-decoration: none;;
+ }
+
+ .nav{
+  position: relative;
+  font-size: 1.5rem;
+  top: 10%;
+  color: rgb(48,48,54);
+  text-align: center;
+ }
+
+ .nav:hover{
+  color: rgb(235, 48, 35);
+ }
+
+ .squiggle {
+  background-image: linear-gradient(to bottom, rgb(235, 48, 35) 0%, rgb(235, 48, 35) 100%);
+  background-position: 0 100%;
+  background-repeat: repeat-x;
+  background-size: 2px 2px;
+  color: rgb(48,48,54);
+  text-decoration: none;
+}
+.squiggle:hover {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 4'%3E%3Cstyle type='text/css'%3E.squiggle{animation:shift .3s linear infinite;}@keyframes shift {from {transform:translateX(0);}to {transform:translateX(-15px);}}%3C/style%3E%3Cpath fill='none' stroke='rgb(235, 48, 35)' stroke-width='2' class='squiggle' d='M0,3.5 c 5,0,5,-3,10,-3 s 5,3,10,3 c 5,0,5,-3,10,-3 s 5,3,10,3'/%3E%3C/svg%3E");
+  background-size: auto 4px;
+}
 
  #image-container {
     display: flex;
     gap: 10px;
-    width: 520px; /* 5 images * (100px + 10px gap) = 520px */
+    width: 620px; /* 5 images * (100px + 10px gap) = 520px */
     flex-wrap: nowrap;
     overflow: hidden;
     
@@ -39,12 +70,13 @@
     z-index: 1000;
     width: 100%;
     position: absolute;
+    padding-left: 4%;
     top: -1%;
     left: 0%;
     display: flex;
     align-items: center;
     gap: 20px;
-    border-bottom: solid 2px red;;
+    border-bottom: solid 2px rgb(235, 48, 35);;
   }
 
   #content-wrapper {
@@ -53,7 +85,7 @@
     gap: 2rem;
     padding: 2rem;
     position: absolute;
-    top: 20%;
+    top: 15%;
     left: 2%;
     right: 2%;
     width: 96%;
@@ -62,15 +94,33 @@
 
   #TitleCard {
     padding: 20px;
-    background-color: red;
+    background-color: rgb(235, 48, 35);
     width: 30%;
-    
+    color: white;
     display: flex;
     flex-direction: column;
     justify-content: center;
     gap: 2rem;
     text-align: center;
     margin: auto;
+}
+
+button {
+  background-color: rgb(235, 48, 35);
+  border-radius: 5%;
+  border: solid 3px rgb(243,229,218);
+  color: white;
+  padding: 10px 50px;
+  font-size: 16px;
+  margin-top: 1rem;
+  cursor: pointer;
+  transition: background-color 0.6s ease, color 0.6s ease;
+}
+
+button:hover{
+  background-color: rgb(243,229,218);
+  color: rgb(48,48,54);
+  
 }
 
 #carousel-image {
@@ -92,7 +142,7 @@
 
 
   #info{
-    border: 2px dashed red;
+    border: 2px dashed rgb(235, 48, 35);
     width: 55%;
     padding: 10px;
     height: 60vh;
@@ -117,7 +167,7 @@
 
       #TitleCard {
         padding: 20px;
-        background-color: red;
+        background-color: rgb(235, 48, 35);
         width: 90%;
         
         display: flex;
@@ -147,7 +197,7 @@
     
     
       #info{
-        border: 2px dashed red;
+        border: 2px dashed rgb(235, 48, 35);
         width: 100%;
         padding: 10px;
         height: 60vh;
@@ -190,7 +240,7 @@
         gap: 0px;
         
         column-gap: 15%;
-        border-bottom: solid 2px red;;
+        border-bottom: solid 2px rgb(235, 48, 35);;
       }
     
   }
