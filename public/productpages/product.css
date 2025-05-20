@@ -6,7 +6,7 @@
   }
 
   body {
-    background-color: rgb(243,229,218);
+    background-color: rgb(245, 236, 230);
     color: rgb(48,48,54);
     font-family: "Times New Roman", Times, serif;
     padding: 2rem;
@@ -66,7 +66,7 @@
 
   #wrapper {
     padding: 10px;
-    background-color: rgb(243,229,218);
+    background-color: rgb(245, 236, 230);
     z-index: 1000;
     width: 100%;
     position: absolute;
@@ -108,7 +108,7 @@
 button {
   background-color: rgb(212, 38, 61);
   border-radius: 5%;
-  border: solid 3px rgb(243,229,218);
+  border: solid 3px rgb(245, 236, 230);
   color: white;
   padding: 10px 50px;
   font-size: 16px;
@@ -118,7 +118,7 @@ button {
 }
 
 button:hover{
-  background-color: rgb(243,229,218);
+  background-color: rgb(245, 236, 230);
   color: rgb(48,48,54);
   
 }
@@ -231,7 +231,7 @@ button:hover{
   
     #wrapper {
       padding: 0px;
-      background-color: rgb(243,229,218);
+      background-color: rgb(245, 236, 230);
       z-index: 1000;
       width: 100%;
       position: absolute;
