@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'MyFont';
-    src: url('../assets/font/Goozette.otf') format('woff2'); /* or woff/ttf depending on your file */
+    src: url('../assets/font/NoahsHandwrittenTimes-Regular.otf') format('woff2'); /* or woff/ttf depending on your file */
     font-weight: normal;
     font-style: normal;
   }
@@ -14,6 +14,7 @@
   }
 
  #title{
+  font-family: 'MyFont';
     position: relative;
     font-size: 4rem;
     top: 10%;
@@ -26,6 +27,7 @@
  }
 
  .nav{
+  font-family: 'MyFont';
   position: relative;
   font-size: 1.5rem;
   top: 10%;
@@ -101,6 +103,10 @@
   #imageFun{
     position: relative;
     width: 50%;
+  }
+
+  h2{
+    font-family: 'MyFont';
   }
 
  

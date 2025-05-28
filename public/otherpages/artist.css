@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'MyFont';
-    src: url('../assets/font/Goozette.otf') format('woff2'); /* or woff/ttf depending on your file */
+    src: url('../assets/font/NoahsHandwrittenTimes-Regular.otf') format('woff2'); /* or woff/ttf depending on your file */
     font-weight: normal;
     font-style: normal;
   }
@@ -14,6 +14,7 @@
   }
 
  #title{
+  font-family: 'MyFont';
     position: relative;
     font-size: 4rem;
     top: 10%;
@@ -26,6 +27,7 @@
  }
 
  .nav{
+  font-family: 'MyFont';
   position: relative;
   font-size: 1.5rem;
   top: 10%;
@@ -117,6 +119,7 @@
   }
   
   .artist-name {
+    font-family: 'MyFont';
     font-size: 18px;
     display: inline-block;
   }
@@ -131,6 +134,13 @@
     width: 100%; /* Take up full width of the container */
     padding: 10px;
     display: none; /* Hidden by default */
+    transition: all 0.6s ease; /* Smooth transition when toggling */
+  }
+
+  .artist-info img {
+    width: 30%; /* Take up full width of the container */
+    padding: 10px;
+     /* Hidden by default */
     transition: all 0.6s ease; /* Smooth transition when toggling */
   }
   
@@ -213,5 +223,12 @@
       color: rgb(48,48,54);
       text-align: center;
      }
+
+     .artist-info img {
+      width: 40%; /* Take up full width of the container */
+      padding: 10px;
+       /* Hidden by default */
+      transition: all 0.6s ease; /* Smooth transition when toggling */
+    }
     
   }
