@@ -1,4 +1,4 @@
-const stripe = Stripe("pk_test_51RLpC0Pr778ACl02laDbyjcrHyI94tIpyi6bf4VCYSEElXBm2kB6Qbdyvr6jpBFhU5LNFTWS5Lm4MJZKWT9JjKrc00hs1RjRUw");
+const stripe = Stripe("pk_live_51Ri18DJU8UI8wMKYaky2JTC3gpMCdwTUseTSP8EBRqAlWAXponZshrL2s05SiXWSpAFTDrIBeiByo4EBmSrllEkB00y9VFhUZt");
 
 let checkout;
 initialize();
