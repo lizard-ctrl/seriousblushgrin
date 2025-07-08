@@ -103,7 +103,7 @@ h1{
 
   .product-grid {
     width: 55%;
-    height: 70vh;
+    height: 75vh;
     overflow: scroll;
     
     display: grid;
