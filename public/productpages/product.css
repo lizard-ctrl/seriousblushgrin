@@ -237,6 +237,10 @@ button:hover{
       height: 30px;
     }
   
+    #specialLink{
+      color: red;
+    }
+    
     #wrapper {
       padding: 0px;
       background-color: rgb(245, 236, 230);
