@@ -23,7 +23,7 @@
 
  a{
   color: rgb(48,48,54);
-  text-decoration: none;;
+  text-decoration: underline;
  }
 
  .nav{
@@ -240,7 +240,7 @@ button:hover{
     #specialLink{
       color: red;
     }
-    
+
     #wrapper {
       padding: 0px;
       background-color: rgb(245, 236, 230);
