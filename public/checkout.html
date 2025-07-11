@@ -14,41 +14,31 @@
     <form id="payment-form">
       <label>
         <h2>Email</h2>
-        <input type="text" id="email" placeholder="you@example.com"
-      /></label>
+        <input type="text" id="email" placeholder="you@example.com" />
+      </label>
       <div type="text" id="email-errors"></div>
-      <h2>Payment</h2>
-      <div id="payment-element">
-        <!--Stripe.js injects the Payment Element-->
+
+      <h4>Shipping Address</h4>
+      <div id="shipping-address-element">
+        <!-- Stripe injects Shipping Address element here -->
       </div>
+
+      <h4>Payment</h4>
+      <div id="payment-element">
+        <!-- Stripe injects Payment Element here -->
+      </div>
+
       <h2 id="product-name">Product Name</h2>
-          <img id="product-image" src="" alt="Product Image" />
-      <button id="submit">
-        <form id="payment-form">
-         
-          <h4>Shipping Address</h4>
-          <div id="shipping-address-element">
-            <!--Stripe.js injects the Address Element-->
-          </div>
-          <h4>Payment</h4>
-          <div id="payment-element">
-            <!--Stripe.js injects the Payment Element-->
-          </div>
+      <img id="product-image" src="" alt="Product Image" />
 
-          <p>23$ + 6.99$ Shipping</p>
+      <p id="price-info">23$ + 6.99$ Shipping</p>
 
-          <button id="submit">
+      <button id="submit" type="submit">
         <div class="spinner hidden" id="spinner"></div>
-        <div>
-          
-        </div>
-       
-        <div id="break"></div>
         <span id="button-text">Pay now</span>
       </button>
+
       <div id="payment-message" class="hidden"></div>
     </form>
-
-    
   </body>
 </html>
